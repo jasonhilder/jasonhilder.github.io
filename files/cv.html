@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>Jason Hilder</title>
+</head>
+<style>
+body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            font-size: 12px;
+            font-family: 'Open Sans', sans-serif;
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+/*
+Primary Rules
+*/
+        h1 {
+            font-weight: 300;
+            margin: 5px 0 0;
+            font-size: 40px;
+            padding: 0 10px 10px;
+            border-radius: 2px;
+            font-family: 'Ubuntu' 27px'
+        }
+
+        /*
+h2 {
+    width: 150px;
+    font-size: 18px;
+    padding-left: 20px;
+    font-family: 'Ubuntu' 27px'
+}*/
+        h2,
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 0;
+            line-height: 28px;
+            font-family: 'Ubuntu' 27px'
+        }
+
+        /* h2, h3 { margin-top: 5px } */
+        a {
+            color: #1f71a8;
+            display: inline-block;
+            text-decoration: none;
+            padding: 2px 4px;
+            border-radius: 2px;
+            margin-right: -2px;
+        }
+
+        a:hover {
+            background-color: #1f71a8;
+            color: #fff;
+        }
+
+        .key:first-child {
+            margin-left: 0
+        }
+
+        .key {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .key::before {
+            content: '◆';
+            position: absolute;
+            left: -15px;
+            color: #555;
+            font-size: 7pt;
+        }
+
+        .key:first-child::before {
+            content: ''
+        }
+
+        .section {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0 15px;
+        }
+
+        .section:last-child {
+            border: none
+        }
+
+        .section-text {
+            width: 80%;
+            /*
+    font-size: 18px;
+    line-height: 24px;
+    */
+            margin: 0 0 10px;
+            padding: 0 10px;
+        }
+
+        .subsection {
+            margin: 10px 0 5px
+        }
+
+        .desc {
+            font-size: 16px;
+            color: #444;
+        }
+
+        .contact-info {
+            font-size: 16px;
+            text-align: right;
+        }
+
+        .emph {
+            font-style: italic
+        }
+
+        .light {
+            color: #aaa;
+            letter-spacing: 1px;
+            font-size: 14px;
+            line-height: 28px;
+            text-transform: uppercase;
+        }
+
+        ul {
+            padding-left: 15px;
+        }
+
+        ul.skills {
+            float: left;
+            width: 30%;
+            padding-left: 0px;
+            margin: 0 20px 0 0;
+        }
+
+        ul.skills li {
+            list-style: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        ul.skills li:last-child {
+            margin: 0;
+        }
+
+        /*
+ Float Rules
+*/
+        .row:before,
+        .row:after {
+            content: "";
+            display: table;
+        }
+
+        .row:after {
+            clear: both
+        }
+
+        .col {
+            float: left
+        }
+
+        .col-right {
+            float: right
+        }
+
+        /*
+ Page Rules
+*/
+        .page {
+            width: 1000px;
+            min-height: 29.7cm;
+            margin: 1cm auto;
+
+            background: white;
+            padding: 20px 50px;
+        }
+
+        .subpage {
+            padding: 1cm;
+            border: 1px #1f71a8;
+            height: 297mm;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            .page {
+                margin: 0;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                min-height: initial;
+                box-shadow: initial;
+                background: initial;
+                page-break-after: always;
+            }
+
+            .page-break {
+                page-break-before: always;
+                padding-top: 30px;
+            }
+
+            body {
+                font-size: 12pt;
+            }
+
+            h1 {
+                font-size: 23pt;
+            }
+
+            h2 {
+                font-size: 10pt;
+                width: 3cm;
+                padding-left: 10px;
+            }
+
+            h3 {
+                font-size: 10pt;
+                line-height: 11pt
+            }
+
+            .section-text {
+                font-size: 9pt;
+                line-height: 14pt;
+            }
+
+            .light {
+                font-size: 7.5pt;
+                line-height: 12pt;
+                color: #ddd;
+            }
+
+            .page {
+                width: 21cm
+            }
+
+            ul {
+                margin: 5px 0 0
+            }
+
+            .section {
+                padding: 5px 0 8px
+            }
+
+            .section-text {
+                width: 15cm;
+                margin: 5px 0 5px;
+            }
+
+            .subsection {
+                margin: 5px 0 0
+            }
+
+            .desc {
+                font-size: 9pt
+            }
+
+            .contact-info {
+                font-size: 9pt
+            }
+
+            ul.skills {
+                margin: 0 10px 0 0;
+            }
+
+            ul.skills li {
+                font-size: 9pt;
+                margin-bottom: 0
+            }
+
+        }
+</style>
+
+<body>
+    <div class="page">
+        <div class="section row">
+            <h1 class="col">Jason Hilder</h1>
+            <div class="contact-info col-right">
+                <div>071 160 2558 <i class="fa fa-phone-square"></i></div>
+                <div><a href="mailto:jason@jasonhilder.dev">jason@jasonhilder.dev</a> <i
+                        class="fa fa-envelope-square"></i></div>
+                <div><a href="https://www.linkedin.com/in/jason-hilder/?originalSubdomain=za">za.linkedin.com/in/jason-hilder</a> <i
+                        class="fa fa-linkedin-square"></i></div>
+                <div><a href="https://www.jasonhilder.dev/">www.jasonhilder.dev</a> <img src="/static/images/portrait-solid.svg" style="width: 4.5%"></div>
+            </div>
+        </div>
+
+        <div class="section row">
+            <h2 class="col">Skills</h2>
+            <div class="section-text col-right row">
+                <ul class="skills" style="width:30%">
+                    <li> Javascript </li>
+                    <li> Svelte </li>
+                    <li> Php </li>
+                    <li> Python </li>
+                    <li> Golang </li>
+                    <li> MySQL </li>
+                    <li> Windows OS</li>
+                    <li> HTML5 </li>
+                    <li> Git Version Control </li>
+                    <li> Time Management </li>
+
+                </ul>
+                <ul class="skills" style="width:30%">
+                    <li> React </li>
+                    <li> Node JS </li>
+                    <li> Expression Engine </li>
+                    <li> Django </li>
+                    <li> Hugo </li>
+                    <li> MongoDB </li>
+                    <li> Linux OS </li>
+                    <li> Bootstrap </li>
+                    <li> Github Actions </li>
+                    <li> Team Player </li>
+                </ul>
+                <ul class="skills">
+                    <li> React native </li>
+                    <li> Craft CMS </li>
+                    <li> Wordpress </li>
+                    <li> Flask </li>
+                    <li> Insert </li>
+                    <li> Cpanel </li>
+                    <li> MacOS </li>
+                    <li> CSS </li>
+                    <li> Autodidact </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section row">
+            <h2 class="col">Experience</h2>
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3>Reload </h3>
+                    </div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col"> Full Stack Developer </div>
+                    <div class="col-right light">2020-present</div>
+                </div>
+                <div>
+                    <ul>
+                        <li>Develop Front-end user interfaces communicating with backend</li>
+                        <li>Develop and deploy websites using a Wordpress, Expression Engine, React, Svelte</li>
+                        <li>Develop and add to Rest API's using Node.js, Directus(php)</li>
+                        <li>Integrate MYSQL and NOSQL(Mongo) databases to API backends</li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3>iKind Media</h3>
+                    </div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col"> Developer </div>
+                    <div class="col-right light">2018-2020</div>
+                </div>
+                <div>
+                    <ul>
+                        <li>Design, develop and deploy Wordpress websites.</li>
+                        <li>Maintain and update required components of exsisting sites, using the backend systems cPanel and phpMyAdmin.</li>
+                        <li>Basic customisation of websites MySQL databases.</li> 
+                        <li> Many other technical office tasks such as, set-up automated cloud based data backups, configure backup server, build new basic servers, setup networks as well as building new employees computers, fix and format crashed computers.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section row">
+            <h2 class="col">Previous <br> Experience</h2>
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3>Fred & Jase Maintenance Services</h3>
+                    </div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col"> General Maintenace Man </div>
+                    <div class="col-right light">January 2015-2017</div>
+                </div>
+                <div>
+                    Referal: Fred Hilder - +27 (71) 673 8098
+                </div>
+                
+                <div class="row">
+                    <div class="col">
+                        <h3> Lashrite CC </h3>
+                    </div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col"> Lasher </div>
+                    <div class="col-right light">December 2013-2015</div>
+                </div>
+                <div>
+                    Referal: Johan Venter - +27 (83) 648 4882
+                </div>
+            </div>
+        </div>
+
+        <div class="section row">
+            <h2 class="col">Education</h2>
+            <div class="section-text col-right">
+                <h3>Certificate of Competence - Electrical First Line Maintenance</h3>
+                <div>SimTech, Training and Development</div>
+                <div class="row">
+                    <div class="col light">Durban, South Africa</div>
+                    <div class="col-right light">2016</div>
+                </div>
+            </div>
+            
+            <div class="section-text col-right">
+                <h3>Matric</h3>
+                <div>Glenwood Boys Highschool</div>
+                <div class="row">
+                    <div class="col light">Durban, South Africa</div>
+                    <div class="col-right light">2013</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="section row">
+            <h2 class="col">Online Courses</h2>
+            
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3><a href="https://www.udemy.com/course/design-patterns-python/" target="_blank">
+                        Design Patterns in Python</a></h3>
+                    </div>
+                </div>
+                <div class="desc">
+                    Completed outside of work hours.
+                </div>
+            </div>
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3><a href="https://www.udemy.com/course/modern-react-front-to-back/" target="_blank">
+                        React Front to Back</a></h3>
+                    </div>
+                </div>
+                <div class="desc">
+                     Completed outside of work hours.
+                </div>
+            </div>
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3><a href="https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/" target="_blank">
+                            The MYSQL Bootcamp</a></h3>
+                    </div>
+                </div>
+                <div class="desc">
+                    Completed outside of work hours.
+                </div>
+            </div>
+
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3>
+                            <a href="https://www.udemy.com/the-python-mega-course/" target="_blank">
+                                The Python Mega Course: Build 10 Real World Applications
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="desc">
+                    Completed under employment with iKindMedia.
+                </div>
+            </div>
+            <!-- <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3> MySQL </h3>
+                    </div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col">lorem ipsum</div>
+                    <div class="col-right light">2012</div>
+                </div>
+            </div> -->
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3><a href="https://www.udemy.com/the-modern-python3-bootcamp/" target="_blank">
+                            The Modern Python 3 Bootcamp</a></h3>
+                    </div>
+                </div>
+                <div class="desc">
+                    Completed outside of work hours.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
